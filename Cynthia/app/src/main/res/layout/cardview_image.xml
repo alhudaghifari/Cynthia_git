@@ -10,16 +10,14 @@
         android:id="@+id/cardview_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
         android:foreground="?android:attr/selectableItemBackground"
         app:cardBackgroundColor="@color/blueskyNom"
         app:cardCornerRadius="0dp"
         app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        app:contentPaddingBottom="2dp"
-        app:contentPaddingLeft="14dp"
-        app:contentPaddingRight="14dp"
-        app:contentPaddingTop="14dp"
         >
 
         <LinearLayout
@@ -31,7 +29,16 @@
                 android:id="@+id/iv_gambar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
                 android:src="@drawable/fashion1"/>
+
+            <TextView
+                android:id="@+id/tv_judulGambar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
 
         </LinearLayout>
 

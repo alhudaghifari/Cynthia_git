@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,15 +20,15 @@ import java.util.List;
  * Created by Alhudaghifari on 11/22/2017.
  */
 
-public class RecyclerHomeLeft extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class RecyclerHomeRight extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    private static String TAG = RecyclerHomeLeft.class.getSimpleName();
+    private static String TAG = RecyclerHomeRight.class.getSimpleName();
 
     private Context mContext;
 
     private List<DbDataFashion> mDbDataFashionList;
 
-    public RecyclerHomeLeft(Context context, List<DbDataFashion> dbDataFashions) {
+    public RecyclerHomeRight(Context context, List<DbDataFashion> dbDataFashions) {
         mContext = context;
         mDbDataFashionList = dbDataFashions;
     }
@@ -54,7 +53,8 @@ public class RecyclerHomeLeft extends RecyclerView.Adapter<RecyclerView.ViewHold
         ViewHolderArticle viewHolderArticle = (ViewHolderArticle) holder;
         final int posisiAdapter = holder.getAdapterPosition();
 
-        if (position % 2 == 1) {
+
+        if (position % 2 == 0) {
             final DbDataFashion dbDataFashion = mDbDataFashionList.get(position);
 
             String judul = dbDataFashion.getJudul();
