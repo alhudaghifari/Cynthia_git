@@ -1,2 +1,2 @@
-# dr_tania
-An Application to detect plant's disease
+# Cynthia
+An Application to fashion's guide
