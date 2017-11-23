@@ -121,25 +121,64 @@ public class MainActivity extends AppCompatActivity {
             realm.beginTransaction();
             dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
             dbDataFashion.setJudul("pakaian pria 12");
-            dbDataFashion.setLinkGambar("https://static.cdn-cdpl.com/270x135/c420ea5d6888e29a87437c2d005edd57/Foto_1_-_Andalin_Winner_Tech_in_Asia_Arena_Jakarta_2017.png");
+            dbDataFashion.setLinkGambar("https://cdn.brilio.net/news/2017/03/23/123353/605785-fashion-item-cowok-bikin-cewek-ilfil-.jpg");
             realm.commitTransaction();
 
             realm.beginTransaction();
             dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
             dbDataFashion.setJudul("pakaian pria 13");
-            dbDataFashion.setLinkGambar("https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/popcorn-movie-party-entertainment.jpg");
+            dbDataFashion.setLinkGambar("https://s1.bukalapak.com/img/6652566611/m-1000-1000/JAKET_BOMBER_ADIDAS_PRIA_TERBARU_JAKET_FASHION_COWOK_MODEL_K.jpg");
             realm.commitTransaction();
 
             realm.beginTransaction();
             dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
             dbDataFashion.setJudul("pakaian pria 14");
-            dbDataFashion.setLinkGambar("https://static.cdn-cdpl.com/270x135/2e2e60f587dfd485821293c09e51a70b/Alasan_Mengapa_Kamu_Harus_Menggunakan_Framework.png");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/7542304491/m-1000-1000/Sweater___Hoodie___Jaket_Murah_RipNDip.jpg");
             realm.commitTransaction();
 
             realm.beginTransaction();
             dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
-            dbDataFashion.setJudul("pakaian pria 15");
-            dbDataFashion.setLinkGambar("https://static.cdn-cdpl.com/270x135/998b78e349061b4971c0a2b0e8d6be41/construct-2.png");
+            dbDataFashion.setJudul("pakaian wanita 15");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/2916902661/m-1000-1000/2017_09_24T00_19_36_07_00.jpg");
+            realm.commitTransaction();
+
+            realm.beginTransaction();
+            dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
+            dbDataFashion.setJudul("pakaian wanita 23");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/7591248981/m-1000-1000/Mutif_161___Hijab_Fashion___Baju_Muslim.jpg");
+            realm.commitTransaction();
+
+            // oke
+
+            realm.beginTransaction();
+            dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
+            dbDataFashion.setJudul("pakaian wanita 23");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/7591248981/m-1000-1000/Mutif_161___Hijab_Fashion___Baju_Muslim.jpg");
+            realm.commitTransaction();
+
+            realm.beginTransaction();
+            dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
+            dbDataFashion.setJudul("pakaian wanita 51");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/7766678371/m-1000-1000/161_Strawbery_Pink___Rio_Red_scaled.jpg");
+            realm.commitTransaction();
+
+            realm.beginTransaction();
+            dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
+            dbDataFashion.setJudul("pakaian wanita 23");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/2212116391/m-1000-1000/0_0501f5bc_3370_46cc_a000_889be40cb16e_540_675.jpg");
+            realm.commitTransaction();
+
+
+            realm.beginTransaction();
+            dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
+            dbDataFashion.setJudul("pakaian wanita 511");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/7290116391/m-1000-1000/226196536_f12004fd_6f4f_4eef_a60a_65a8c0bdb4d9_540_540.jpg");
+            realm.commitTransaction();
+
+            realm.beginTransaction();
+            dbDataFashion = realm.createObject(DbDataFashion.class, UUID.randomUUID().toString());
+            dbDataFashion.setJudul("pakaian wanita 123");
+            dbDataFashion.setLinkGambar("https://s2.bukalapak.com/img/2242113381/m-1000-1000/PERSEGI_4_BHP_09_BAHAN__MAXMARA_WARNA_BIRU_mt__BUNGA_UK_120X.jpg");
             realm.commitTransaction();
 
             showToast("data dummy saved");
