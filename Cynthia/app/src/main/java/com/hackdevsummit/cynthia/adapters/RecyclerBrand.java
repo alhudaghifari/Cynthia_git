@@ -20,15 +20,15 @@ import java.util.List;
  * Created by Alhudaghifari on 11/22/2017.
  */
 
-public class RecyclerHomeRight extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
+public class RecyclerBrand extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
-    private static String TAG = RecyclerHomeRight.class.getSimpleName();
+    private static String TAG = RecyclerBrand.class.getSimpleName();
 
     private Context mContext;
 
     private List<DbDataFashion> mDbDataFashionList;
 
-    public RecyclerHomeRight(Context context, List<DbDataFashion> dbDataFashions) {
+    public RecyclerBrand(Context context, List<DbDataFashion> dbDataFashions) {
         mContext = context;
         mDbDataFashionList = dbDataFashions;
     }
@@ -53,24 +53,21 @@ public class RecyclerHomeRight extends RecyclerView.Adapter<RecyclerView.ViewHol
         ViewHolderArticle viewHolderArticle = (ViewHolderArticle) holder;
         final int posisiAdapter = holder.getAdapterPosition();
 
-        if (position % 2 == 0) {
-            final DbDataFashion dbDataFashion = mDbDataFashionList.get(position);
+        final DbDataFashion dbDataFashion = mDbDataFashionList.get(position);
 
-            String judul = dbDataFashion.getJudul();
-            String linkGambar = dbDataFashion.getLinkGambar();
+        String judul = dbDataFashion.getJudul();
+        String linkGambar = dbDataFashion.getLinkGambar();
 
+        ImageView imageViewGambarBesar = viewHolderArticle.mImageViewGambarBerita;
 
-            ImageView imageViewGambarBesar = viewHolderArticle.mImageViewGambarBerita;
+        viewHolderArticle.mtextViewJudulGambar.setText(judul);
 
-            viewHolderArticle.mtextViewJudulGambar.setText(judul);
+        imageViewGambarBesar.setVisibility(View.VISIBLE);
+        Glide.with(mContext).load(linkGambar)
+                .into(imageViewGambarBesar);
 
-            imageViewGambarBesar.setVisibility(View.VISIBLE);
-            Glide.with(mContext).load(linkGambar)
-                    .into(imageViewGambarBesar);
-
-            Log.d(TAG,position + ". Recycler Success");
-            Log.d(TAG,"link : " + linkGambar);
-        }
+        Log.d(TAG,position + ". Recycler Success");
+        Log.d(TAG,"link : " + linkGambar);
     }
 
     @Override

@@ -30,79 +30,132 @@
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="wrap_content" />-->
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/halfblue"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:layout_centerVertical="true"
+                    android:src="@android:drawable/ic_search_category_default"
+                    android:textColor="@color/red"
+                    android:textSize="35sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/iv_camera"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:src="@drawable/ic_camera_alt_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/halfblue"
+                    android:textSize="35sp"
+                    />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
     </android.support.design.widget.AppBarLayout>
 
-
-    <FrameLayout
-        android:id="@+id/content"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1">
 
-        <LinearLayout
-            android:id="@+id/linearlayoutHome"
+        <FrameLayout
+            android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:orientation="horizontal"
-            android:visibility="visible">
+            android:layout_height="0dp">
 
-            <TextView
-                android:id="@+id/tv_nodata"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nodata"
-                android:visibility="gone"/>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_numbers_home_left"
+            <LinearLayout
+                android:id="@+id/linearlayoutHome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fadingEdge="none"
-                android:layout_weight="1"
-                android:paddingRight="2dp"
-                android:scrollbars="vertical"
-                android:visibility="visible"/>
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_numbers_home_right"
+                <TextView
+                    android:id="@+id/tv_nodata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nodata"
+                    android:visibility="gone"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_numbers_home_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:layout_weight="1"
+                    android:paddingRight="2dp"
+                    android:scrollbars="none"
+                    android:visibility="visible"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_numbers_home_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:layout_weight="1"
+                    android:paddingLeft="2dp"
+                    android:scrollbars="none"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayoutBrand"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fadingEdge="none"
-                android:layout_weight="1"
-                android:paddingLeft="2dp"
-                android:scrollbars="vertical"
-                android:visibility="visible"/>
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
 
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_nodata_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nodata"
+                    android:visibility="gone"/>
 
-        <LinearLayout
-            android:id="@+id/linearlayoutBrand"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:visibility="gone">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_numbers_brand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="none"
+                    android:layout_weight="1"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"/>
 
-            <TextView
-                android:id="@+id/tv_nodata_brand"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nodata"
-                android:visibility="gone"/>
+            </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_numbers_brand"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fadingEdge="none"
-                android:layout_weight="1"
-                android:scrollbars="vertical"
-                android:visibility="visible"/>
+        </FrameLayout>
 
-        </LinearLayout>
+    </ScrollView>
 
-    </FrameLayout>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

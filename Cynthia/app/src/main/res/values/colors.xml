@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#69c1f7</color>
-    <color name="colorPrimaryDark">#54a3e0</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#e41b23</color>
+    <color name="colorPrimaryDark">#e41b23</color>
+    <color name="colorAccent">#ffffff</color>
 
     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="red">#e41b23</color>
     <color name="blueskyNom">#f5ffff</color>
     <color name="halfblue">#54a3e0</color>
+    <color name="whiteblue">#daeaf7</color>
 </resources>
